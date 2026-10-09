@@ -1,1 +1,116 @@
-//prueba
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    color: #111827;
+}
+
+.subtitle {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #374151;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #10b981;
+}
+
+/* Grillas para ordenar los campos en filas */
+.row-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.row-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.row-vertical input {
+    margin-bottom: 10px;
+}
+
+.row-radio {
+    margin: 10px 0;
+}
+
+.row-radio label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+}
+
+/* Botón Verde centrado */
+.btn-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#btnEnviar {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#btnEnviar:hover {
+    background-color: #059669;
+}

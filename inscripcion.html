@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inscripción Curso</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+
+    <div class="form-container">
+        <form id="inscriptionForm" action="php/enviar.php" method="POST">
+            <h2>Formulario de Inscripción Curso</h2>
+            <p>Rellene cuidadosamente el formulario de inscripción</p>
+            <hr>
+
+            <label class="section-title">Nombre del alumno</label>
+            <div class="row-three">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="segundo_nombre" placeholder="Segundo Nombre">
+                <input type="text" name="apellido" placeholder="Apellido" required>
+            </div>
+
+            <div class="row-two">
+                <div>
+                    <label class="section-title">Fecha de nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" required>
+                </div>
+                <div>
+                    <label class="section-title">Género</label>
+                    <select name="genero" required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="section-title">Dirección</label>
+            <div class="row-vertical">
+                <input type="text" name="direccion1" placeholder="Dirección de la calle" required>
+            </div>
+            <div class="row-two">
+                <input type="text" name="ciudad" placeholder="Ciudad" required>
+                <input type="text" name="estado" placeholder="Estado / Provincia" required>
+            </div>
+            <div class="row-two">
+                <input type="text" name="codigo_postal" placeholder="Código Postal" required>
+                <div></div>
+            </div>
+
+            <div class="row-two">
+                <div>
+                    <label class="section-title">Email</label>
+                    <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                <div>
+                    <label class="section-title">Número de teléfono</label>
+                    <input type="tel" name="telefono" placeholder="(000) 000-0000" required>
+                </div>
+            </div>
+
+            <label class="section-title">¿Ha recibido otros cursos Anteriormente?</label>
+            <div class="row-radio">
+                <label><input type="radio" name="cursos_anteriores" value="Si" required> Sí</label>
+                <label><input type="radio" name="cursos_anteriores" value="No"> No</label>
+            </div>
+
+            <div class="row-two">
+                <div>
+                    <label class="section-title">Empresa</label>
+                    <input type="text" name="empresa">
+                </div>
+                <div>
+                    <label class="section-title">Cursos</label>
+                    <select name="cursos" required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Lógica y Programación">Lógica y Programación</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="section-title">Comentarios adicionales</label>
+            <textarea name="comentarios" rows="4" placeholder="Escriba aquí..."></textarea>
+
+            <div class="btn-container">
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
